@@ -1,3 +1,4 @@
+using System.Reflection;
 using FluentValidation;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -19,7 +20,14 @@ namespace Nemeris.Infrastructure;
 /// </summary>
 public static class DependencyInjection
 {
-    public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
+    /// <param name="additionalMapperAssemblies">
+    /// Host assemblies with extra AutoMapper profiles (e.g. the Api's entity-to-wire-DTO
+    /// profile). One AddAutoMapper call for all assemblies keeps registration deterministic.
+    /// </param>
+    public static IServiceCollection AddInfrastructure(
+        this IServiceCollection services,
+        IConfiguration configuration,
+        params Assembly[] additionalMapperAssemblies)
     {
         services.AddDbContext<NemerisDbContext>(options =>
             options.UseSqlServer(
@@ -44,7 +52,14 @@ public static class DependencyInjection
         services.Configure<JwtOptions>(configuration.GetSection(JwtOptions.SectionName));
         services.Configure<SmtpOptions>(configuration.GetSection(SmtpOptions.SectionName));
 
-        services.AddAutoMapper(cfg => cfg.AddMaps(typeof(MappingProfile).Assembly));
+        services.AddAutoMapper(cfg =>
+        {
+            cfg.AddMaps(typeof(MappingProfile).Assembly);
+            foreach (var assembly in additionalMapperAssemblies)
+            {
+                cfg.AddMaps(assembly);
+            }
+        });
         services.AddValidatorsFromAssembly(typeof(MappingProfile).Assembly);
 
         services.AddScoped<IProductService, ProductService>();
@@ -52,6 +67,7 @@ public static class DependencyInjection
         services.AddScoped<ICartService, CartService>();
         services.AddScoped<IOrderService, OrderService>();
         services.AddScoped<IReviewService, ReviewService>();
+        services.AddScoped<IAddressService, AddressService>();
         services.AddScoped<ITokenService, TokenService>();
         services.AddScoped<IEmailService, EmailService>();
 

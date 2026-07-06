@@ -1,0 +1,74 @@
+@model ProductCreateDto
+@{
+    ViewData["Title"] = L["Admin.NewProduct"];
+    var categories = (IReadOnlyList<Category>)ViewBag.Categories;
+}
+
+<h1 class="mb-4">@L["Admin.NewProduct"]</h1>
+
+<div class="row">
+    <div class="col-lg-7">
+        <form asp-action="Create" method="post">
+            <div asp-validation-summary="All" class="text-danger mb-3"></div>
+
+            <div class="mb-3">
+                <label asp-for="Name" class="form-label">@L["Field.Name"]</label>
+                <input asp-for="Name" class="form-control" />
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Slug" class="form-label">@L["Field.Slug"]</label>
+                <input asp-for="Slug" class="form-control" placeholder="wireless-mouse" />
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Description" class="form-label">@L["Field.Description"]</label>
+                <textarea asp-for="Description" class="form-control" rows="4"></textarea>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-4 mb-3">
+                    <label asp-for="Sku" class="form-label">@L["Field.Sku"]</label>
+                    <input asp-for="Sku" class="form-control" />
+                </div>
+                <div class="col-sm-4 mb-3">
+                    <label asp-for="Price" class="form-label">@L["Field.Price"]</label>
+                    <input asp-for="Price" class="form-control" />
+                </div>
+                <div class="col-sm-4 mb-3">
+                    <label asp-for="CompareAtPrice" class="form-label">@L["Field.CompareAtPrice"]</label>
+                    <input asp-for="CompareAtPrice" class="form-control" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-4 mb-3">
+                    <label asp-for="StockQuantity" class="form-label">@L["Field.Stock"]</label>
+                    <input asp-for="StockQuantity" class="form-control" />
+                </div>
+                <div class="col-sm-8 mb-3">
+                    <label asp-for="CategoryId" class="form-label">@L["Field.Category"]</label>
+                    <select asp-for="CategoryId" class="form-select">
+                        @foreach (var category in categories)
+                        {
+                            <option value="@category.Id">@category.Name</option>
+                        }
+                    </select>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="ImageUrl" class="form-label">@L["Field.ImageUrl"]</label>
+                <input asp-for="ImageUrl" class="form-control" />
+            </div>
+
+            <div class="form-check mb-4">
+                <input asp-for="IsActive" class="form-check-input" />
+                <label asp-for="IsActive" class="form-check-label">@L["Field.Active"]</label>
+            </div>
+
+            <button type="submit" class="btn btn-primary">@L["Common.Save"]</button>
+            <a class="btn btn-outline-secondary" asp-action="Index">@L["Common.Cancel"]</a>
+        </form>
+    </div>
+</div>

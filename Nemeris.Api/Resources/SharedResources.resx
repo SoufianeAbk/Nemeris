@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Error.CartEmpty" xml:space="preserve">
+    <value>Your cart is empty.</value>
+  </data>
+  <data name="Error.AddressNotFound" xml:space="preserve">
+    <value>The selected address was not found.</value>
+  </data>
+  <data name="Error.ProductUnavailable" xml:space="preserve">
+    <value>One of the products in your cart is no longer available.</value>
+  </data>
+  <data name="Error.InsufficientStock" xml:space="preserve">
+    <value>There is not enough stock for one of the products in your cart.</value>
+  </data>
+  <data name="Error.CategoryNotFound" xml:space="preserve">
+    <value>The category does not exist.</value>
+  </data>
+  <data name="Error.CategoryInUse" xml:space="preserve">
+    <value>The category still contains products or subcategories.</value>
+  </data>
+  <data name="Error.CategoryOwnParent" xml:space="preserve">
+    <value>A category cannot be its own parent.</value>
+  </data>
+  <data name="Error.ProductNotFound" xml:space="preserve">
+    <value>The product was not found.</value>
+  </data>
+  <data name="Error.Unexpected" xml:space="preserve">
+    <value>An unexpected error occurred. Please try again later.</value>
+  </data>
+  <data name="Auth.InvalidCredentials" xml:space="preserve">
+    <value>Invalid email or password.</value>
+  </data>
+  <data name="Auth.AccountLocked" xml:space="preserve">
+    <value>This account is temporarily locked. Try again later.</value>
+  </data>
+  <data name="Auth.EmailTaken" xml:space="preserve">
+    <value>An account with this email already exists.</value>
+  </data>
+  <data name="Auth.InvalidRefreshToken" xml:space="preserve">
+    <value>The refresh token is invalid or expired.</value>
+  </data>
+  <data name="Email.OrderConfirmationSubject" xml:space="preserve">
+    <value>Your Nemeris order {0}</value>
+  </data>
+  <data name="Email.OrderConfirmationBody" xml:space="preserve">
+    <value>&lt;p&gt;Thank you for your order &lt;strong&gt;{0}&lt;/strong&gt;.&lt;/p&gt;&lt;p&gt;Order total: {1:C}&lt;/p&gt;&lt;p&gt;We will let you know as soon as it ships.&lt;/p&gt;</value>
+  </data>
+</root>

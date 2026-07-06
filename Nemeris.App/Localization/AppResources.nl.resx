@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ProductsTitle" xml:space="preserve"><value>Producten</value></data>
+  <data name="SearchPlaceholder" xml:space="preserve"><value>Zoek producten…</value></data>
+  <data name="OfflineBanner" xml:space="preserve"><value>Offline — gecachte producten worden getoond</value></data>
+  <data name="AddToCart" xml:space="preserve"><value>In winkelwagen</value></data>
+  <data name="OutOfStock" xml:space="preserve"><value>Uitverkocht</value></data>
+  <data name="CartAdded" xml:space="preserve"><value>Toegevoegd aan je winkelwagen.</value></data>
+  <data name="CartQueued" xml:space="preserve"><value>Je bent offline — het item wordt automatisch gesynchroniseerd.</value></data>
+  <data name="PendingSync" xml:space="preserve"><value>Wacht op synchronisatie:</value></data>
+  <data name="SyncNow" xml:space="preserve"><value>Nu synchroniseren</value></data>
+  <data name="NoProducts" xml:space="preserve"><value>Nog geen producten. Trek omlaag om te vernieuwen.</value></data>
+</root>

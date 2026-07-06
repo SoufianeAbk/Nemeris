@@ -1,0 +1,81 @@
+@model PagedList<Order>
+@{
+    ViewData["Title"] = L["Admin.Orders"];
+    OrderStatus? currentStatus = ViewBag.Status;
+}
+
+<h1 class="mb-4">@L["Admin.Orders"]</h1>
+
+<form method="get" asp-action="Index" class="row g-2 mb-3" style="max-width: 420px;">
+    <div class="col-8">
+        <select name="status" class="form-select">
+            <option value="">@L["Admin.AllStatuses"]</option>
+            @foreach (var status in Enum.GetValues<OrderStatus>())
+            {
+                <option value="@status" selected="@(currentStatus == status)">@L[$"Status.{status}"]</option>
+            }
+        </select>
+    </div>
+    <div class="col-4">
+        <button type="submit" class="btn btn-outline-secondary w-100">@L["Admin.Filter"]</button>
+    </div>
+</form>
+
+@if (Model.Items.Count == 0)
+{
+    <div class="alert alert-secondary">@L["Admin.NoResults"]</div>
+}
+else
+{
+    <table class="table align-middle">
+        <thead>
+            <tr>
+                <th>@L["Order.Number"]</th>
+                <th>@L["Order.Date"]</th>
+                <th>@L["Order.Customer"]</th>
+                <th>@L["Order.Status"]</th>
+                <th>@L["Order.Payment"]</th>
+                <th class="text-end">@L["Order.Total"]</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var order in Model.Items)
+            {
+                <tr>
+                    <td>@order.OrderNumber</td>
+                    <td>@order.CreatedAt.ToString("g")</td>
+                    <td>@order.ShippingName</td>
+                    <td><span class="badge @StatusBadge(order.Status)">@L[$"Status.{order.Status}"]</span></td>
+                    <td>@L[$"Payment.{order.PaymentStatus}"]</td>
+                    <td class="text-end">€ @order.Total.ToString("N2")</td>
+                    <td class="text-end">
+                        <a class="btn btn-outline-secondary btn-sm" asp-action="Details" asp-route-id="@order.Id">@L["Common.Details"]</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <nav aria-label="Pagination">
+        <ul class="pagination">
+            <li class="page-item @(Model.HasPreviousPage ? "" : "disabled")">
+                <a class="page-link" asp-action="Index" asp-route-page="@(Model.Page - 1)" asp-route-status="@currentStatus">@L["Products.Previous"]</a>
+            </li>
+            <li class="page-item disabled"><span class="page-link">@Model.Page / @Math.Max(1, Model.TotalPages)</span></li>
+            <li class="page-item @(Model.HasNextPage ? "" : "disabled")">
+                <a class="page-link" asp-action="Index" asp-route-page="@(Model.Page + 1)" asp-route-status="@currentStatus">@L["Products.Next"]</a>
+            </li>
+        </ul>
+    </nav>
+}
+
+@functions {
+    private static string StatusBadge(OrderStatus status) => status switch
+    {
+        OrderStatus.Pending => "bg-warning text-dark",
+        OrderStatus.Delivered => "bg-success",
+        OrderStatus.Cancelled or OrderStatus.Refunded => "bg-danger",
+        _ => "bg-info text-dark",
+    };
+}

@@ -1,0 +1,98 @@
+@model DashboardViewModel
+@{
+    ViewData["Title"] = L["Admin.Dashboard"];
+}
+
+<h1 class="mb-4">@L["Admin.Dashboard"]</h1>
+
+<div class="row row-cols-2 row-cols-md-5 g-3 mb-4">
+    <div class="col">
+        <a class="text-decoration-none" asp-area="Admin" asp-controller="Products" asp-action="Index">
+            <div class="card text-center h-100">
+                <div class="card-body">
+                    <div class="fs-2 fw-bold">@Model.TotalProducts</div>
+                    <div class="text-muted">@L["Admin.Products"]</div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="col">
+        <a class="text-decoration-none" asp-area="Admin" asp-controller="Categories" asp-action="Index">
+            <div class="card text-center h-100">
+                <div class="card-body">
+                    <div class="fs-2 fw-bold">@Model.TotalCategories</div>
+                    <div class="text-muted">@L["Admin.Categories"]</div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="col">
+        <a class="text-decoration-none" asp-area="Admin" asp-controller="Orders" asp-action="Index">
+            <div class="card text-center h-100">
+                <div class="card-body">
+                    <div class="fs-2 fw-bold">@Model.TotalOrders</div>
+                    <div class="text-muted">@L["Admin.Orders"]</div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="col">
+        <a class="text-decoration-none" asp-area="Admin" asp-controller="Orders" asp-action="Index"
+           asp-route-status="@OrderStatus.Pending">
+            <div class="card text-center h-100 border-warning">
+                <div class="card-body">
+                    <div class="fs-2 fw-bold">@Model.PendingOrders</div>
+                    <div class="text-muted">@L["Admin.PendingOrders"]</div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="col">
+        <div class="card text-center h-100">
+            <div class="card-body">
+                <div class="fs-2 fw-bold">@Model.TotalCustomers</div>
+                <div class="text-muted">@L["Admin.Customers"]</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h4 class="mb-3">@L["Admin.RecentOrders"]</h4>
+
+@if (Model.RecentOrders.Count == 0)
+{
+    <div class="alert alert-secondary">@L["Admin.NoResults"]</div>
+}
+else
+{
+    <table class="table align-middle">
+        <thead>
+            <tr>
+                <th>@L["Order.Number"]</th>
+                <th>@L["Order.Date"]</th>
+                <th>@L["Order.Customer"]</th>
+                <th>@L["Order.Status"]</th>
+                <th class="text-end">@L["Order.Total"]</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var order in Model.RecentOrders)
+            {
+                <tr>
+                    <td>@order.OrderNumber</td>
+                    <td>@order.CreatedAt.ToString("g")</td>
+                    <td>@order.ShippingName</td>
+                    <td>@L[$"Status.{order.Status}"]</td>
+                    <td class="text-end">€ @order.Total.ToString("N2")</td>
+                    <td class="text-end">
+                        <a class="btn btn-outline-secondary btn-sm"
+                           asp-area="Admin" asp-controller="Orders" asp-action="Details" asp-route-id="@order.Id">
+                            @L["Common.Details"]
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

@@ -1,0 +1,65 @@
+@model AddressViewModel
+@{
+    ViewData["Title"] = L["Account.AddAddressTitle"];
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <h1 class="mb-4">@L["Account.AddAddressTitle"]</h1>
+
+        <form asp-action="AddAddress" method="post">
+            <input type="hidden" asp-for="ReturnUrl" />
+            <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+            <div class="mb-3">
+                <label asp-for="FullName" class="form-label">@L["Address.FullName"]</label>
+                <input asp-for="FullName" class="form-control" autocomplete="name" />
+                <span asp-validation-for="FullName" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Street" class="form-label">@L["Address.Street"]</label>
+                <input asp-for="Street" class="form-control" autocomplete="street-address" />
+                <span asp-validation-for="Street" class="text-danger"></span>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-4 mb-3">
+                    <label asp-for="PostalCode" class="form-label">@L["Address.PostalCode"]</label>
+                    <input asp-for="PostalCode" class="form-control" autocomplete="postal-code" />
+                    <span asp-validation-for="PostalCode" class="text-danger"></span>
+                </div>
+                <div class="col-sm-8 mb-3">
+                    <label asp-for="City" class="form-label">@L["Address.City"]</label>
+                    <input asp-for="City" class="form-control" autocomplete="address-level2" />
+                    <span asp-validation-for="City" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-4 mb-3">
+                    <label asp-for="Country" class="form-label">@L["Address.Country"]</label>
+                    <input asp-for="Country" class="form-control text-uppercase" maxlength="2" placeholder="BE" />
+                    <span asp-validation-for="Country" class="text-danger"></span>
+                </div>
+                <div class="col-sm-8 mb-3">
+                    <label asp-for="PhoneNumber" class="form-label">@L["Address.Phone"]</label>
+                    <input asp-for="PhoneNumber" class="form-control" autocomplete="tel" />
+                    <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-check mb-4">
+                <input asp-for="IsDefault" class="form-check-input" />
+                <label asp-for="IsDefault" class="form-check-label">@L["Address.IsDefault"]</label>
+            </div>
+
+            <button type="submit" class="btn btn-primary">@L["Common.Save"]</button>
+            <a class="btn btn-outline-secondary" asp-action="Addresses">@L["Common.Cancel"]</a>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

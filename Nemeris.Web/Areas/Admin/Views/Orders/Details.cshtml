@@ -1,0 +1,98 @@
+@model Order
+@{
+    ViewData["Title"] = $"{L["Order.Number"]} {Model.OrderNumber}";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h1 class="mb-0">@L["Order.Number"] @Model.OrderNumber</h1>
+    <a class="btn btn-outline-secondary" asp-action="Index">&larr; @L["Common.Back"]</a>
+</div>
+
+<div class="row g-4 mb-4">
+    <div class="col-md-4">
+        <div class="card h-100">
+            <div class="card-header">@L["Order.ShippingAddress"]</div>
+            <div class="card-body">
+                @Model.ShippingName<br />
+                @Model.ShippingStreet<br />
+                @Model.ShippingPostalCode @Model.ShippingCity, @Model.ShippingCountry
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100">
+            <div class="card-body">
+                <dl class="row mb-0">
+                    <dt class="col-6">@L["Order.Date"]</dt>
+                    <dd class="col-6">@Model.CreatedAt.ToString("g")</dd>
+                    <dt class="col-6">@L["Order.Payment"]</dt>
+                    <dd class="col-6">@L[$"Payment.{Model.PaymentStatus}"]</dd>
+                    <dt class="col-6">@L["Order.SubTotal"]</dt>
+                    <dd class="col-6">€ @Model.SubTotal.ToString("N2")</dd>
+                    <dt class="col-6">@L["Order.ShippingCost"]</dt>
+                    <dd class="col-6">€ @Model.ShippingCost.ToString("N2")</dd>
+                    <dt class="col-6">@L["Order.Total"]</dt>
+                    <dd class="col-6 fw-bold">€ @Model.Total.ToString("N2")</dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100">
+            <div class="card-header">@L["Order.Status"]</div>
+            <div class="card-body">
+                <p><span class="badge @StatusBadge(Model.Status) fs-6">@L[$"Status.{Model.Status}"]</span></p>
+                <form asp-action="UpdateStatus" asp-route-id="@Model.Id" method="post" class="d-flex gap-2">
+                    <select name="status" class="form-select form-select-sm">
+                        @foreach (var status in Enum.GetValues<OrderStatus>())
+                        {
+                            <option value="@status" selected="@(Model.Status == status)">@L[$"Status.{status}"]</option>
+                        }
+                    </select>
+                    <button type="submit" class="btn btn-primary btn-sm text-nowrap">@L["Admin.UpdateStatus"]</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h4 class="mb-3">@L["Order.Items"]</h4>
+<table class="table">
+    <thead>
+        <tr>
+            <th>@L["Order.Product"]</th>
+            <th class="text-end">@L["Order.UnitPrice"]</th>
+            <th class="text-end">@L["Order.Quantity"]</th>
+            <th class="text-end">@L["Order.LineTotal"]</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Items)
+        {
+            <tr>
+                <td>@item.ProductName</td>
+                <td class="text-end">€ @item.UnitPrice.ToString("N2")</td>
+                <td class="text-end">@item.Quantity</td>
+                <td class="text-end">€ @item.LineTotal.ToString("N2")</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@if (!string.IsNullOrEmpty(Model.Notes))
+{
+    <div class="card mt-3" style="max-width: 640px;">
+        <div class="card-header">@L["Order.Notes"]</div>
+        <div class="card-body">@Model.Notes</div>
+    </div>
+}
+
+@functions {
+    private static string StatusBadge(OrderStatus status) => status switch
+    {
+        OrderStatus.Pending => "bg-warning text-dark",
+        OrderStatus.Delivered => "bg-success",
+        OrderStatus.Cancelled or OrderStatus.Refunded => "bg-danger",
+        _ => "bg-info text-dark",
+    };
+}

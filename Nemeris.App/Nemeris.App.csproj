@@ -70,7 +70,10 @@
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="10.0.0" />
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
 		<PackageReference Include="CommunityToolkit.Maui" Version="13.0.0" />
-		<PackageReference Include="sqlite-net-pcl" Version="1.9.172" />
+		<!-- sqlite-net-sqlcipher instead of sqlite-net-pcl: same API, but it pairs with
+		     bundle_e_sqlcipher for encryption. sqlite-net-pcl would drag in bundle_green
+		     (plain SQLite) and the two native bundles conflict. -->
+		<PackageReference Include="sqlite-net-sqlcipher" Version="1.9.172" />
 		<PackageReference Include="SQLitePCLRaw.bundle_e_sqlcipher" Version="2.1.10" />
 	</ItemGroup>
 

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Nav.Home" xml:space="preserve"><value>Home</value></data>
+  <data name="Nav.Products" xml:space="preserve"><value>Producten</value></data>
+  <data name="Nav.Cart" xml:space="preserve"><value>Winkelwagen</value></data>
+  <data name="Nav.Admin" xml:space="preserve"><value>Beheer</value></data>
+  <data name="Nav.Login" xml:space="preserve"><value>Inloggen</value></data>
+  <data name="Nav.Register" xml:space="preserve"><value>Account aanmaken</value></data>
+  <data name="Nav.Logout" xml:space="preserve"><value>Uitloggen</value></data>
+  <data name="Nav.MyOrders" xml:space="preserve"><value>Mijn bestellingen</value></data>
+  <data name="Nav.MyAddresses" xml:space="preserve"><value>Mijn adressen</value></data>
+  <data name="Home.HeroTitle" xml:space="preserve"><value>Welkom bij Nemeris</value></data>
+  <data name="Home.HeroSubtitle" xml:space="preserve"><value>Kwaliteitsproducten, bij je thuis geleverd.</value></data>
+  <data name="Home.ShopNow" xml:space="preserve"><value>Shop nu</value></data>
+  <data name="Home.Featured" xml:space="preserve"><value>Nieuw binnen</value></data>
+  <data name="Products.Title" xml:space="preserve"><value>Producten</value></data>
+  <data name="Products.Search" xml:space="preserve"><value>Zoek producten…</value></data>
+  <data name="Products.AllCategories" xml:space="preserve"><value>Alle categorieën</value></data>
+  <data name="Products.Apply" xml:space="preserve"><value>Toepassen</value></data>
+  <data name="Products.SortName" xml:space="preserve"><value>Naam</value></data>
+  <data name="Products.SortPriceAsc" xml:space="preserve"><value>Prijs (laag naar hoog)</value></data>
+  <data name="Products.SortPriceDesc" xml:space="preserve"><value>Prijs (hoog naar laag)</value></data>
+  <data name="Products.SortNewest" xml:space="preserve"><value>Nieuwste</value></data>
+  <data name="Products.NoResults" xml:space="preserve"><value>Geen producten gevonden voor je zoekopdracht.</value></data>
+  <data name="Products.AddToCart" xml:space="preserve"><value>In winkelwagen</value></data>
+  <data name="Products.OutOfStock" xml:space="preserve"><value>Uitverkocht</value></data>
+  <data name="Products.Previous" xml:space="preserve"><value>Vorige</value></data>
+  <data name="Products.Next" xml:space="preserve"><value>Volgende</value></data>
+  <data name="Product.Sku" xml:space="preserve"><value>SKU</value></data>
+  <data name="Product.InStock" xml:space="preserve"><value>Op voorraad</value></data>
+  <data name="Product.Quantity" xml:space="preserve"><value>Aantal</value></data>
+  <data name="Cart.Title" xml:space="preserve"><value>Je winkelwagen</value></data>
+  <data name="Cart.Added" xml:space="preserve"><value>Toegevoegd aan je winkelwagen.</value></data>
+  <data name="Cart.Empty" xml:space="preserve"><value>Je winkelwagen is leeg.</value></data>
+  <data name="Cart.BrowseProducts" xml:space="preserve"><value>Bekijk producten</value></data>
+  <data name="Cart.Product" xml:space="preserve"><value>Product</value></data>
+  <data name="Cart.Price" xml:space="preserve"><value>Prijs</value></data>
+  <data name="Cart.Quantity" xml:space="preserve"><value>Aantal</value></data>
+  <data name="Cart.LineTotal" xml:space="preserve"><value>Totaal</value></data>
+  <data name="Cart.SubTotal" xml:space="preserve"><value>Subtotaal</value></data>
+  <data name="Cart.Update" xml:space="preserve"><value>Bijwerken</value></data>
+  <data name="Cart.Remove" xml:space="preserve"><value>Verwijderen</value></data>
+  <data name="Cart.Checkout" xml:space="preserve"><value>Afrekenen</value></data>
+  <data name="Cart.ShippingNote" xml:space="preserve"><value>Verzendkosten worden berekend bij het afrekenen.</value></data>
+  <data name="Checkout.Title" xml:space="preserve"><value>Afrekenen</value></data>
+  <data name="Checkout.NoAddress" xml:space="preserve"><value>Voeg een verzendadres toe voordat je afrekent.</value></data>
+  <data name="Checkout.SelectAddress" xml:space="preserve"><value>Bezorgadres</value></data>
+  <data name="Checkout.Notes" xml:space="preserve"><value>Opmerkingen (optioneel)</value></data>
+  <data name="Checkout.PlaceOrder" xml:space="preserve"><value>Bestelling plaatsen</value></data>
+  <data name="Checkout.AddNewAddress" xml:space="preserve"><value>Nieuw adres toevoegen</value></data>
+  <data name="Confirmation.Title" xml:space="preserve"><value>Bedankt voor je bestelling!</value></data>
+  <data name="Confirmation.Message" xml:space="preserve"><value>We hebben je bestelling ontvangen.</value></data>
+  <data name="Confirmation.ContinueShopping" xml:space="preserve"><value>Verder winkelen</value></data>
+  <data name="Confirmation.ViewOrders" xml:space="preserve"><value>Bekijk mijn bestellingen</value></data>
+  <data name="Account.LoginTitle" xml:space="preserve"><value>Inloggen</value></data>
+  <data name="Account.RegisterTitle" xml:space="preserve"><value>Account aanmaken</value></data>
+  <data name="Account.Email" xml:space="preserve"><value>E-mailadres</value></data>
+  <data name="Account.Password" xml:space="preserve"><value>Wachtwoord</value></data>
+  <data name="Account.ConfirmPassword" xml:space="preserve"><value>Bevestig wachtwoord</value></data>
+  <data name="Account.FirstName" xml:space="preserve"><value>Voornaam</value></data>
+  <data name="Account.LastName" xml:space="preserve"><value>Achternaam</value></data>
+  <data name="Account.RememberMe" xml:space="preserve"><value>Aangemeld blijven</value></data>
+  <data name="Account.NoAccount" xml:space="preserve"><value>Nog geen account?</value></data>
+  <data name="Account.HaveAccount" xml:space="preserve"><value>Heb je al een account?</value></data>
+  <data name="Account.OrdersTitle" xml:space="preserve"><value>Mijn bestellingen</value></data>
+  <data name="Account.NoOrders" xml:space="preserve"><value>Je hebt nog geen bestellingen.</value></data>
+  <data name="Account.AddressesTitle" xml:space="preserve"><value>Mijn adressen</value></data>
+  <data name="Account.NoAddresses" xml:space="preserve"><value>Je hebt nog geen opgeslagen adressen.</value></data>
+  <data name="Account.AddAddressTitle" xml:space="preserve"><value>Adres toevoegen</value></data>
+  <data name="Address.FullName" xml:space="preserve"><value>Volledige naam</value></data>
+  <data name="Address.Street" xml:space="preserve"><value>Straat en huisnummer</value></data>
+  <data name="Address.City" xml:space="preserve"><value>Plaats</value></data>
+  <data name="Address.PostalCode" xml:space="preserve"><value>Postcode</value></data>
+  <data name="Address.Country" xml:space="preserve"><value>Land (2-lettercode)</value></data>
+  <data name="Address.Phone" xml:space="preserve"><value>Telefoon (optioneel)</value></data>
+  <data name="Address.IsDefault" xml:space="preserve"><value>Gebruik als standaardadres</value></data>
+  <data name="Address.Default" xml:space="preserve"><value>Standaard</value></data>
+  <data name="Order.Number" xml:space="preserve"><value>Bestelling</value></data>
+  <data name="Order.Date" xml:space="preserve"><value>Datum</value></data>
+  <data name="Order.Status" xml:space="preserve"><value>Status</value></data>
+  <data name="Order.Payment" xml:space="preserve"><value>Betaling</value></data>
+  <data name="Order.Total" xml:space="preserve"><value>Totaal</value></data>
+  <data name="Order.Items" xml:space="preserve"><value>Artikelen</value></data>
+  <data name="Order.ShippingAddress" xml:space="preserve"><value>Verzendadres</value></data>
+  <data name="Order.Notes" xml:space="preserve"><value>Opmerkingen</value></data>
+  <data name="Order.Customer" xml:space="preserve"><value>Klant</value></data>
+  <data name="Order.Product" xml:space="preserve"><value>Product</value></data>
+  <data name="Order.UnitPrice" xml:space="preserve"><value>Stukprijs</value></data>
+  <data name="Order.Quantity" xml:space="preserve"><value>Aantal</value></data>
+  <data name="Order.LineTotal" xml:space="preserve"><value>Totaal</value></data>
+  <data name="Order.SubTotal" xml:space="preserve"><value>Subtotaal</value></data>
+  <data name="Order.ShippingCost" xml:space="preserve"><value>Verzendkosten</value></data>
+  <data name="Status.Pending" xml:space="preserve"><value>In afwachting</value></data>
+  <data name="Status.Confirmed" xml:space="preserve"><value>Bevestigd</value></data>
+  <data name="Status.Processing" xml:space="preserve"><value>In verwerking</value></data>
+  <data name="Status.Shipped" xml:space="preserve"><value>Verzonden</value></data>
+  <data name="Status.Delivered" xml:space="preserve"><value>Bezorgd</value></data>
+  <data name="Status.Cancelled" xml:space="preserve"><value>Geannuleerd</value></data>
+  <data name="Status.Refunded" xml:space="preserve"><value>Terugbetaald</value></data>
+  <data name="Payment.Pending" xml:space="preserve"><value>In afwachting</value></data>
+  <data name="Payment.Paid" xml:space="preserve"><value>Betaald</value></data>
+  <data name="Payment.Failed" xml:space="preserve"><value>Mislukt</value></data>
+  <data name="Payment.Refunded" xml:space="preserve"><value>Terugbetaald</value></data>
+  <data name="Common.Save" xml:space="preserve"><value>Opslaan</value></data>
+  <data name="Common.Cancel" xml:space="preserve"><value>Annuleren</value></data>
+  <data name="Common.Delete" xml:space="preserve"><value>Verwijderen</value></data>
+  <data name="Common.Edit" xml:space="preserve"><value>Bewerken</value></data>
+  <data name="Common.Actions" xml:space="preserve"><value>Acties</value></data>
+  <data name="Common.Back" xml:space="preserve"><value>Terug</value></data>
+  <data name="Common.Details" xml:space="preserve"><value>Details</value></data>
+  <data name="Common.ConfirmDelete" xml:space="preserve"><value>Weet je zeker dat je dit wilt verwijderen?</value></data>
+  <data name="Admin.Dashboard" xml:space="preserve"><value>Dashboard</value></data>
+  <data name="Admin.Products" xml:space="preserve"><value>Producten</value></data>
+  <data name="Admin.Orders" xml:space="preserve"><value>Bestellingen</value></data>
+  <data name="Admin.Categories" xml:space="preserve"><value>Categorieën</value></data>
+  <data name="Admin.PendingOrders" xml:space="preserve"><value>Openstaande bestellingen</value></data>
+  <data name="Admin.Customers" xml:space="preserve"><value>Klanten</value></data>
+  <data name="Admin.RecentOrders" xml:space="preserve"><value>Recente bestellingen</value></data>
+  <data name="Admin.NewProduct" xml:space="preserve"><value>Nieuw product</value></data>
+  <data name="Admin.EditProduct" xml:space="preserve"><value>Product bewerken</value></data>
+  <data name="Admin.NewCategory" xml:space="preserve"><value>Nieuwe categorie</value></data>
+  <data name="Admin.EditCategory" xml:space="preserve"><value>Categorie bewerken</value></data>
+  <data name="Admin.AllStatuses" xml:space="preserve"><value>Alle statussen</value></data>
+  <data name="Admin.Filter" xml:space="preserve"><value>Filteren</value></data>
+  <data name="Admin.Search" xml:space="preserve"><value>Zoeken…</value></data>
+  <data name="Admin.NoResults" xml:space="preserve"><value>Niets gevonden.</value></data>
+  <data name="Admin.UpdateStatus" xml:space="preserve"><value>Status bijwerken</value></data>
+  <data name="Admin.NoParent" xml:space="preserve"><value>Geen (hoofdcategorie)</value></data>
+  <data name="Admin.Active" xml:space="preserve"><value>Actief</value></data>
+  <data name="Admin.Inactive" xml:space="preserve"><value>Verborgen</value></data>
+  <data name="Field.Name" xml:space="preserve"><value>Naam</value></data>
+  <data name="Field.Slug" xml:space="preserve"><value>Slug</value></data>
+  <data name="Field.Description" xml:space="preserve"><value>Beschrijving</value></data>
+  <data name="Field.Sku" xml:space="preserve"><value>SKU</value></data>
+  <data name="Field.Price" xml:space="preserve"><value>Prijs</value></data>
+  <data name="Field.CompareAtPrice" xml:space="preserve"><value>Adviesprijs (optioneel)</value></data>
+  <data name="Field.Stock" xml:space="preserve"><value>Voorraad</value></data>
+  <data name="Field.ImageUrl" xml:space="preserve"><value>Afbeeldings-URL</value></data>
+  <data name="Field.Active" xml:space="preserve"><value>Zichtbaar in de winkel</value></data>
+  <data name="Field.Category" xml:space="preserve"><value>Categorie</value></data>
+  <data name="Field.ParentCategory" xml:space="preserve"><value>Bovenliggende categorie</value></data>
+  <data name="Auth.InvalidCredentials" xml:space="preserve"><value>Ongeldig e-mailadres of wachtwoord.</value></data>
+  <data name="Auth.AccountLocked" xml:space="preserve"><value>Dit account is tijdelijk vergrendeld. Probeer het later opnieuw.</value></data>
+  <data name="Auth.AccessDenied" xml:space="preserve"><value>Je hebt geen toegang tot die pagina.</value></data>
+  <data name="Error.CartEmpty" xml:space="preserve"><value>Je winkelwagen is leeg.</value></data>
+  <data name="Error.AddressNotFound" xml:space="preserve"><value>Het geselecteerde adres is niet gevonden.</value></data>
+  <data name="Error.ProductUnavailable" xml:space="preserve"><value>Een van de producten in je winkelwagen is niet meer beschikbaar.</value></data>
+  <data name="Error.InsufficientStock" xml:space="preserve"><value>Er is onvoldoende voorraad voor een van de producten in je winkelwagen.</value></data>
+  <data name="Error.CategoryNotFound" xml:space="preserve"><value>De categorie bestaat niet.</value></data>
+  <data name="Error.CategoryInUse" xml:space="preserve"><value>De categorie bevat nog producten of subcategorieën.</value></data>
+  <data name="Error.CategoryOwnParent" xml:space="preserve"><value>Een categorie kan niet zijn eigen bovenliggende categorie zijn.</value></data>
+  <data name="Error.ProductNotFound" xml:space="preserve"><value>Het product is niet gevonden.</value></data>
+  <data name="Validation.Required" xml:space="preserve"><value>Dit veld is verplicht.</value></data>
+  <data name="Validation.Email" xml:space="preserve"><value>Voer een geldig e-mailadres in.</value></data>
+  <data name="Validation.PasswordLength" xml:space="preserve"><value>Het wachtwoord moet minstens 8 tekens bevatten.</value></data>
+  <data name="Validation.PasswordMismatch" xml:space="preserve"><value>De wachtwoorden komen niet overeen.</value></data>
+  <data name="Validation.CountryCode" xml:space="preserve"><value>Gebruik een landcode van twee letters, bijv. BE.</value></data>
+</root>

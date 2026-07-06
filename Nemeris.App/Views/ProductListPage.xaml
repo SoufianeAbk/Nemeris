@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:Nemeris.App.ViewModels"
+             xmlns:dto="clr-namespace:Nemeris.Shared.Catalog;assembly=Nemeris.Shared"
+             x:Class="Nemeris.App.Views.ProductListPage"
+             x:DataType="vm:ProductListViewModel"
+             Title="{Binding Loc[ProductsTitle]}">
+
+    <Grid RowDefinitions="Auto,Auto,Auto,Auto,*" RowSpacing="6" Padding="12">
+
+        <!-- In-app language switch: explicit choice, independent of the device locale. -->
+        <HorizontalStackLayout Grid.Row="0" Spacing="6" HorizontalOptions="End">
+            <Button Text="EN" FontSize="12" Padding="10,4"
+                    Command="{Binding SetLanguageCommand}" CommandParameter="en" />
+            <Button Text="NL" FontSize="12" Padding="10,4"
+                    Command="{Binding SetLanguageCommand}" CommandParameter="nl" />
+            <Button Text="FR" FontSize="12" Padding="10,4"
+                    Command="{Binding SetLanguageCommand}" CommandParameter="fr" />
+        </HorizontalStackLayout>
+
+        <SearchBar Grid.Row="1"
+                   Placeholder="{Binding Loc[SearchPlaceholder]}"
+                   Text="{Binding SearchText}"
+                   SearchCommand="{Binding SearchCommand}" />
+
+        <!-- Offline banner: visible when the list came from the encrypted cache. -->
+        <Border Grid.Row="2"
+                IsVisible="{Binding IsFromCache}"
+                BackgroundColor="#FFF3CD"
+                Stroke="#FFE69C"
+                StrokeShape="RoundRectangle 6"
+                Padding="10,6">
+            <Label Text="{Binding Loc[OfflineBanner]}" TextColor="#664D03" FontSize="13" />
+        </Border>
+
+        <!-- Pending sync badge: actions queued while offline, with a manual drain button. -->
+        <Border Grid.Row="3"
+                IsVisible="{Binding HasPendingSync}"
+                BackgroundColor="#CFF4FC"
+                Stroke="#9EEAF9"
+                StrokeShape="RoundRectangle 6"
+                Padding="10,6">
+            <HorizontalStackLayout Spacing="8">
+                <Label Text="{Binding Loc[PendingSync]}" TextColor="#055160" FontSize="13" VerticalOptions="Center" />
+                <Label Text="{Binding PendingSyncCount}" TextColor="#055160" FontSize="13" FontAttributes="Bold" VerticalOptions="Center" />
+                <Button Text="{Binding Loc[SyncNow]}" FontSize="12" Padding="10,2"
+                        Command="{Binding SyncNowCommand}" />
+            </HorizontalStackLayout>
+        </Border>
+
+        <RefreshView Grid.Row="4"
+                     Command="{Binding LoadCommand}"
+                     IsRefreshing="{Binding IsRefreshing}">
+            <CollectionView ItemsSource="{Binding Products}">
+                <CollectionView.EmptyView>
+                    <Label Text="{Binding Loc[NoProducts]}"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           TextColor="Gray" />
+                </CollectionView.EmptyView>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="dto:ProductDto">
+                        <Border Margin="0,4" Padding="10" StrokeShape="RoundRectangle 8" Stroke="#DEE2E6">
+                            <Grid ColumnDefinitions="64,*,Auto" ColumnSpacing="10">
+                                <Border StrokeShape="RoundRectangle 6" StrokeThickness="0"
+                                        BackgroundColor="#F1F3F5" WidthRequest="64" HeightRequest="64">
+                                    <Image Source="{Binding ImageUrl}" Aspect="AspectFill" />
+                                </Border>
+                                <VerticalStackLayout Grid.Column="1" Spacing="2" VerticalOptions="Center">
+                                    <Label Text="{Binding Name}" FontAttributes="Bold" LineBreakMode="TailTruncation" />
+                                    <Label Text="{Binding CategoryName}" FontSize="12" TextColor="Gray" />
+                                    <Label Text="{Binding Price, StringFormat='€ {0:N2}'}" FontSize="14" />
+                                </VerticalStackLayout>
+                                <Button Grid.Column="2"
+                                        Text="{Binding Source={RelativeSource AncestorType={x:Type vm:ProductListViewModel}}, Path=Loc[AddToCart]}"
+                                        FontSize="12"
+                                        VerticalOptions="Center"
+                                        Command="{Binding Source={RelativeSource AncestorType={x:Type vm:ProductListViewModel}}, Path=AddToCartCommand}"
+                                        CommandParameter="{Binding .}" />
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </RefreshView>
+    </Grid>
+</ContentPage>

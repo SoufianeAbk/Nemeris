@@ -1,0 +1,41 @@
+@model CheckoutViewModel
+@{
+    ViewData["Title"] = L["Checkout.Title"];
+}
+
+<h1 class="mb-4">@L["Checkout.Title"]</h1>
+
+<div class="row">
+    <div class="col-md-7">
+        <form asp-action="Checkout" method="post">
+            <h5 class="mb-3">@L["Checkout.SelectAddress"]</h5>
+
+            @foreach (var address in Model.Addresses)
+            {
+                <div class="form-check border rounded p-3 ps-5 mb-2">
+                    <input class="form-check-input" type="radio" asp-for="SelectedAddressId"
+                           value="@address.Id" id="address_@address.Id" />
+                    <label class="form-check-label w-100" for="address_@address.Id">
+                        <strong>@address.FullName</strong>
+                        @if (address.IsDefault)
+                        {
+                            <span class="badge bg-primary ms-1">@L["Address.Default"]</span>
+                        }
+                        <br />
+                        @address.Street, @address.PostalCode @address.City, @address.Country
+                    </label>
+                </div>
+            }
+
+            <a asp-controller="Account" asp-action="AddAddress" asp-route-returnUrl="/Cart/Checkout"
+               class="d-inline-block mb-4">@L["Checkout.AddNewAddress"]</a>
+
+            <div class="mb-4">
+                <label asp-for="Notes" class="form-label">@L["Checkout.Notes"]</label>
+                <textarea asp-for="Notes" class="form-control" rows="3" maxlength="2000"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg">@L["Checkout.PlaceOrder"]</button>
+        </form>
+    </div>
+</div>

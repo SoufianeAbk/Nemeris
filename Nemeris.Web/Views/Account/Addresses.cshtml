@@ -1,0 +1,44 @@
+@model IReadOnlyList<Address>
+@{
+    ViewData["Title"] = L["Account.AddressesTitle"];
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h1 class="mb-0">@L["Account.AddressesTitle"]</h1>
+    <a class="btn btn-primary" asp-action="AddAddress">@L["Account.AddAddressTitle"]</a>
+</div>
+
+@if (Model.Count == 0)
+{
+    <div class="alert alert-secondary">@L["Account.NoAddresses"]</div>
+}
+else
+{
+    <div class="row row-cols-1 row-cols-md-3 g-3">
+        @foreach (var address in Model)
+        {
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h6 class="card-title">
+                            @address.FullName
+                            @if (address.IsDefault)
+                            {
+                                <span class="badge bg-primary ms-1">@L["Address.Default"]</span>
+                            }
+                        </h6>
+                        <p class="card-text mb-0">
+                            @address.Street<br />
+                            @address.PostalCode @address.City, @address.Country
+                            @if (!string.IsNullOrEmpty(address.PhoneNumber))
+                            {
+                                <br />
+                                @address.PhoneNumber
+                            }
+                        </p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}

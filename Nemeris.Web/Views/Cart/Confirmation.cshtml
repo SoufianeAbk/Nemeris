@@ -1,0 +1,64 @@
+@model Order
+@{
+    ViewData["Title"] = L["Confirmation.Title"];
+}
+
+<div class="text-center py-4">
+    <h1 class="text-success">@L["Confirmation.Title"]</h1>
+    <p class="lead">@L["Confirmation.Message"]</p>
+    <p class="fs-5">@L["Order.Number"]: <strong>@Model.OrderNumber</strong></p>
+</div>
+
+<div class="row justify-content-center">
+    <div class="col-lg-8">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>@L["Order.Product"]</th>
+                    <th class="text-end">@L["Order.UnitPrice"]</th>
+                    <th class="text-end">@L["Order.Quantity"]</th>
+                    <th class="text-end">@L["Order.LineTotal"]</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Items)
+                {
+                    <tr>
+                        <td>@item.ProductName</td>
+                        <td class="text-end">€ @item.UnitPrice.ToString("N2")</td>
+                        <td class="text-end">@item.Quantity</td>
+                        <td class="text-end">€ @item.LineTotal.ToString("N2")</td>
+                    </tr>
+                }
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3" class="text-end">@L["Order.SubTotal"]</td>
+                    <td class="text-end">€ @Model.SubTotal.ToString("N2")</td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="text-end">@L["Order.ShippingCost"]</td>
+                    <td class="text-end">€ @Model.ShippingCost.ToString("N2")</td>
+                </tr>
+                <tr class="fw-bold">
+                    <td colspan="3" class="text-end">@L["Order.Total"]</td>
+                    <td class="text-end">€ @Model.Total.ToString("N2")</td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <div class="card mb-4">
+            <div class="card-header">@L["Order.ShippingAddress"]</div>
+            <div class="card-body">
+                @Model.ShippingName<br />
+                @Model.ShippingStreet<br />
+                @Model.ShippingPostalCode @Model.ShippingCity, @Model.ShippingCountry
+            </div>
+        </div>
+
+        <div class="text-center">
+            <a class="btn btn-outline-primary me-2" asp-controller="Account" asp-action="Orders">@L["Confirmation.ViewOrders"]</a>
+            <a class="btn btn-primary" asp-controller="Product" asp-action="Index">@L["Confirmation.ContinueShopping"]</a>
+        </div>
+    </div>
+</div>

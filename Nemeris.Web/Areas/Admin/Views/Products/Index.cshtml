@@ -1,0 +1,81 @@
+@model PagedList<Product>
+@{
+    ViewData["Title"] = L["Admin.Products"];
+    string? search = ViewBag.Search;
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h1 class="mb-0">@L["Admin.Products"]</h1>
+    <a class="btn btn-primary" asp-action="Create">@L["Admin.NewProduct"]</a>
+</div>
+
+<form method="get" asp-action="Index" class="row g-2 mb-3" style="max-width: 480px;">
+    <div class="col-8">
+        <input type="text" name="search" value="@search" class="form-control" placeholder="@L["Admin.Search"]" />
+    </div>
+    <div class="col-4">
+        <button type="submit" class="btn btn-outline-secondary w-100">@L["Admin.Filter"]</button>
+    </div>
+</form>
+
+@if (Model.Items.Count == 0)
+{
+    <div class="alert alert-secondary">@L["Admin.NoResults"]</div>
+}
+else
+{
+    <table class="table align-middle">
+        <thead>
+            <tr>
+                <th>@L["Field.Name"]</th>
+                <th>@L["Field.Sku"]</th>
+                <th>@L["Field.Category"]</th>
+                <th class="text-end">@L["Field.Price"]</th>
+                <th class="text-end">@L["Field.Stock"]</th>
+                <th>@L["Order.Status"]</th>
+                <th class="text-end">@L["Common.Actions"]</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var product in Model.Items)
+            {
+                <tr>
+                    <td>@product.Name</td>
+                    <td><code>@product.Sku</code></td>
+                    <td>@product.Category?.Name</td>
+                    <td class="text-end">€ @product.Price.ToString("N2")</td>
+                    <td class="text-end">@product.StockQuantity</td>
+                    <td>
+                        @if (product.IsActive)
+                        {
+                            <span class="badge bg-success">@L["Admin.Active"]</span>
+                        }
+                        else
+                        {
+                            <span class="badge bg-secondary">@L["Admin.Inactive"]</span>
+                        }
+                    </td>
+                    <td class="text-end">
+                        <a class="btn btn-outline-secondary btn-sm" asp-action="Edit" asp-route-id="@product.Id">@L["Common.Edit"]</a>
+                        <form asp-action="Delete" asp-route-id="@product.Id" method="post" class="d-inline"
+                              onsubmit="return confirm('@L["Common.ConfirmDelete"]');">
+                            <button type="submit" class="btn btn-outline-danger btn-sm">@L["Common.Delete"]</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <nav aria-label="Pagination">
+        <ul class="pagination">
+            <li class="page-item @(Model.HasPreviousPage ? "" : "disabled")">
+                <a class="page-link" asp-action="Index" asp-route-page="@(Model.Page - 1)" asp-route-search="@search">@L["Products.Previous"]</a>
+            </li>
+            <li class="page-item disabled"><span class="page-link">@Model.Page / @Math.Max(1, Model.TotalPages)</span></li>
+            <li class="page-item @(Model.HasNextPage ? "" : "disabled")">
+                <a class="page-link" asp-action="Index" asp-route-page="@(Model.Page + 1)" asp-route-search="@search">@L["Products.Next"]</a>
+            </li>
+        </ul>
+    </nav>
+}

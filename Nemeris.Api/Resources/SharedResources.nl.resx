@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Error.CartEmpty" xml:space="preserve">
+    <value>Je winkelwagen is leeg.</value>
+  </data>
+  <data name="Error.AddressNotFound" xml:space="preserve">
+    <value>Het geselecteerde adres is niet gevonden.</value>
+  </data>
+  <data name="Error.ProductUnavailable" xml:space="preserve">
+    <value>Een van de producten in je winkelwagen is niet meer beschikbaar.</value>
+  </data>
+  <data name="Error.InsufficientStock" xml:space="preserve">
+    <value>Er is onvoldoende voorraad voor een van de producten in je winkelwagen.</value>
+  </data>
+  <data name="Error.CategoryNotFound" xml:space="preserve">
+    <value>De categorie bestaat niet.</value>
+  </data>
+  <data name="Error.CategoryInUse" xml:space="preserve">
+    <value>De categorie bevat nog producten of subcategorieën.</value>
+  </data>
+  <data name="Error.CategoryOwnParent" xml:space="preserve">
+    <value>Een categorie kan niet zijn eigen bovenliggende categorie zijn.</value>
+  </data>
+  <data name="Error.ProductNotFound" xml:space="preserve">
+    <value>Het product is niet gevonden.</value>
+  </data>
+  <data name="Error.Unexpected" xml:space="preserve">
+    <value>Er is een onverwachte fout opgetreden. Probeer het later opnieuw.</value>
+  </data>
+  <data name="Auth.InvalidCredentials" xml:space="preserve">
+    <value>Ongeldig e-mailadres of wachtwoord.</value>
+  </data>
+  <data name="Auth.AccountLocked" xml:space="preserve">
+    <value>Dit account is tijdelijk vergrendeld. Probeer het later opnieuw.</value>
+  </data>
+  <data name="Auth.EmailTaken" xml:space="preserve">
+    <value>Er bestaat al een account met dit e-mailadres.</value>
+  </data>
+  <data name="Auth.InvalidRefreshToken" xml:space="preserve">
+    <value>Het vernieuwingstoken is ongeldig of verlopen.</value>
+  </data>
+  <data name="Email.OrderConfirmationSubject" xml:space="preserve">
+    <value>Je Nemeris-bestelling {0}</value>
+  </data>
+  <data name="Email.OrderConfirmationBody" xml:space="preserve">
+    <value>&lt;p&gt;Bedankt voor je bestelling &lt;strong&gt;{0}&lt;/strong&gt;.&lt;/p&gt;&lt;p&gt;Totaalbedrag: {1:C}&lt;/p&gt;&lt;p&gt;We laten je weten zodra je bestelling is verzonden.&lt;/p&gt;</value>
+  </data>
+</root>

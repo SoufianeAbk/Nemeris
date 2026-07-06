@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Error.CartEmpty" xml:space="preserve">
+    <value>Votre panier est vide.</value>
+  </data>
+  <data name="Error.AddressNotFound" xml:space="preserve">
+    <value>L'adresse sélectionnée est introuvable.</value>
+  </data>
+  <data name="Error.ProductUnavailable" xml:space="preserve">
+    <value>Un des produits de votre panier n'est plus disponible.</value>
+  </data>
+  <data name="Error.InsufficientStock" xml:space="preserve">
+    <value>Le stock est insuffisant pour un des produits de votre panier.</value>
+  </data>
+  <data name="Error.CategoryNotFound" xml:space="preserve">
+    <value>La catégorie n'existe pas.</value>
+  </data>
+  <data name="Error.CategoryInUse" xml:space="preserve">
+    <value>La catégorie contient encore des produits ou des sous-catégories.</value>
+  </data>
+  <data name="Error.CategoryOwnParent" xml:space="preserve">
+    <value>Une catégorie ne peut pas être son propre parent.</value>
+  </data>
+  <data name="Error.ProductNotFound" xml:space="preserve">
+    <value>Le produit est introuvable.</value>
+  </data>
+  <data name="Error.Unexpected" xml:space="preserve">
+    <value>Une erreur inattendue s'est produite. Veuillez réessayer plus tard.</value>
+  </data>
+  <data name="Auth.InvalidCredentials" xml:space="preserve">
+    <value>Adresse e-mail ou mot de passe invalide.</value>
+  </data>
+  <data name="Auth.AccountLocked" xml:space="preserve">
+    <value>Ce compte est temporairement verrouillé. Réessayez plus tard.</value>
+  </data>
+  <data name="Auth.EmailTaken" xml:space="preserve">
+    <value>Un compte avec cette adresse e-mail existe déjà.</value>
+  </data>
+  <data name="Auth.InvalidRefreshToken" xml:space="preserve">
+    <value>Le jeton de rafraîchissement est invalide ou expiré.</value>
+  </data>
+  <data name="Email.OrderConfirmationSubject" xml:space="preserve">
+    <value>Votre commande Nemeris {0}</value>
+  </data>
+  <data name="Email.OrderConfirmationBody" xml:space="preserve">
+    <value>&lt;p&gt;Merci pour votre commande &lt;strong&gt;{0}&lt;/strong&gt;.&lt;/p&gt;&lt;p&gt;Montant total : {1:C}&lt;/p&gt;&lt;p&gt;Nous vous informerons dès son expédition.&lt;/p&gt;</value>
+  </data>
+</root>

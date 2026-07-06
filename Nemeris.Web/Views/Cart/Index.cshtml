@@ -1,0 +1,66 @@
+@model CartViewModel
+@{
+    ViewData["Title"] = L["Cart.Title"];
+}
+
+<h1 class="mb-4">@L["Cart.Title"]</h1>
+
+@if (Model.Items.Count == 0)
+{
+    <div class="alert alert-secondary">@L["Cart.Empty"]</div>
+    <a class="btn btn-primary" asp-controller="Product" asp-action="Index">@L["Cart.BrowseProducts"]</a>
+}
+else
+{
+    <table class="table align-middle">
+        <thead>
+            <tr>
+                <th>@L["Cart.Product"]</th>
+                <th class="text-end">@L["Cart.Price"]</th>
+                <th style="width: 160px;">@L["Cart.Quantity"]</th>
+                <th class="text-end">@L["Cart.LineTotal"]</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Items)
+            {
+                <tr>
+                    <td>
+                        <a asp-controller="Product" asp-action="Details" asp-route-slug="@item.Product.Slug"
+                           class="text-decoration-none">@item.Product.Name</a>
+                    </td>
+                    <td class="text-end">€ @item.Product.Price.ToString("N2")</td>
+                    <td>
+                        @* Absolute quantity set; 0 removes the line server-side. *@
+                        <form asp-action="Update" method="post" class="d-flex gap-1">
+                            <input type="hidden" name="productId" value="@item.ProductId" />
+                            <input type="number" name="quantity" value="@item.Quantity" min="0" max="999"
+                                   class="form-control form-control-sm" style="width: 70px;" />
+                            <button type="submit" class="btn btn-outline-secondary btn-sm">@L["Cart.Update"]</button>
+                        </form>
+                    </td>
+                    <td class="text-end">€ @((item.Product.Price * item.Quantity).ToString("N2"))</td>
+                    <td class="text-end">
+                        <form asp-action="Remove" method="post">
+                            <input type="hidden" name="productId" value="@item.ProductId" />
+                            <button type="submit" class="btn btn-outline-danger btn-sm">@L["Cart.Remove"]</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+        <tfoot>
+            <tr>
+                <th colspan="3" class="text-end">@L["Cart.SubTotal"]</th>
+                <th class="text-end">€ @Model.SubTotal.ToString("N2")</th>
+                <th></th>
+            </tr>
+        </tfoot>
+    </table>
+
+    <div class="d-flex justify-content-between align-items-center">
+        <small class="text-muted">@L["Cart.ShippingNote"]</small>
+        <a class="btn btn-primary btn-lg" asp-action="Checkout">@L["Cart.Checkout"]</a>
+    </div>
+}
