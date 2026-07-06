@@ -1,0 +1,8 @@
+<Solution>
+  <Project Path="Nemeris.Api/Nemeris.Api.csproj" />
+  <Project Path="Nemeris.App/Nemeris.App.csproj" />
+  <Project Path="Nemeris.Core/Nemeris.Core.csproj" />
+  <Project Path="Nemeris.Infrastructure/Nemeris.Infrastructure.csproj" />
+  <Project Path="Nemeris.Shared/Nemeris.Shared.csproj" />
+  <Project Path="Nemeris.Web/Nemeris.Web.csproj" />
+</Solution>
