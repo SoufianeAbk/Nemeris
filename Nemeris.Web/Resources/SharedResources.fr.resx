@@ -167,4 +167,90 @@
   <data name="Validation.PasswordLength" xml:space="preserve"><value>Le mot de passe doit contenir au moins 8 caractères.</value></data>
   <data name="Validation.PasswordMismatch" xml:space="preserve"><value>Les mots de passe ne correspondent pas.</value></data>
   <data name="Validation.CountryCode" xml:space="preserve"><value>Utilisez un code pays à deux lettres, p. ex. BE.</value></data>
+  <data name="Nav.About" xml:space="preserve"><value>À propos</value></data>
+  <data name="Nav.Contact" xml:space="preserve"><value>Contact</value></data>
+  <data name="Nav.Faq" xml:space="preserve"><value>FAQ</value></data>
+  <data name="Nav.Privacy" xml:space="preserve"><value>Politique de confidentialité</value></data>
+  <data name="Footer.Tagline" xml:space="preserve"><value>Des produits de qualité, livrés à votre porte. Le shopping moderne sans tracas.</value></data>
+  <data name="Footer.Shop" xml:space="preserve"><value>Boutique</value></data>
+  <data name="Footer.Support" xml:space="preserve"><value>Aide et support</value></data>
+  <data name="Footer.Company" xml:space="preserve"><value>Entreprise</value></data>
+  <data name="Footer.Rights" xml:space="preserve"><value>Tous droits réservés.</value></data>
+  <data name="Home.HeroEyebrow" xml:space="preserve"><value>Nouvelle saison, nouveautés</value></data>
+  <data name="Home.ViewAll" xml:space="preserve"><value>Voir tous les produits</value></data>
+  <data name="Home.USP1Title" xml:space="preserve"><value>Livraison gratuite</value></data>
+  <data name="Home.USP1Text" xml:space="preserve"><value>Dès 50 € d'achat</value></data>
+  <data name="Home.USP2Title" xml:space="preserve"><value>Retours faciles</value></data>
+  <data name="Home.USP2Text" xml:space="preserve"><value>30 jours pour changer d'avis</value></data>
+  <data name="Home.USP3Title" xml:space="preserve"><value>Paiement sécurisé</value></data>
+  <data name="Home.USP3Text" xml:space="preserve"><value>Paiement toujours chiffré</value></data>
+  <data name="Home.USP4Title" xml:space="preserve"><value>Support réactif</value></data>
+  <data name="Home.USP4Text" xml:space="preserve"><value>Réponse sous 24 heures</value></data>
+  <data name="About.Title" xml:space="preserve"><value>À propos de Nemeris</value></data>
+  <data name="About.Lead" xml:space="preserve"><value>Nous pensons que les bons produits doivent être faciles à trouver. Nemeris livre à votre porte une sélection soignée d'articles de qualité — simplement, rapidement et équitablement.</value></data>
+  <data name="About.Body1" xml:space="preserve"><value>Nemeris est né d'une idée simple : les achats en ligne doivent être sans effort. Pas de catalogues surchargés, pas de frais cachés — juste une gamme choisie avec soin, des prix honnêtes et une livraison rapide.</value></data>
+  <data name="About.Body2" xml:space="preserve"><value>Aujourd'hui, nous servons des clients dans tout le Benelux et au-delà. Nous travaillons directement avec des fournisseurs de confiance, contrôlons chaque produit qui entre dans notre entrepôt et améliorons l'expérience à chaque commande.</value></data>
+  <data name="About.Stat1Value" xml:space="preserve"><value>10 000+</value></data>
+  <data name="About.Stat1Label" xml:space="preserve"><value>Clients satisfaits</value></data>
+  <data name="About.Stat2Value" xml:space="preserve"><value>2 500+</value></data>
+  <data name="About.Stat2Label" xml:space="preserve"><value>Produits en boutique</value></data>
+  <data name="About.Stat3Value" xml:space="preserve"><value>24 h</value></data>
+  <data name="About.Stat3Label" xml:space="preserve"><value>Délai moyen d'expédition</value></data>
+  <data name="About.ValuesTitle" xml:space="preserve"><value>Nos valeurs</value></data>
+  <data name="About.Value1Title" xml:space="preserve"><value>La qualité d'abord</value></data>
+  <data name="About.Value1Text" xml:space="preserve"><value>Chaque produit est contrôlé avant l'envoi. Pas assez bien ? Il ne part pas.</value></data>
+  <data name="About.Value2Title" xml:space="preserve"><value>Des prix honnêtes</value></data>
+  <data name="About.Value2Text" xml:space="preserve"><value>Pas de frais cachés ni de fausses réductions — le prix affiché est le prix payé.</value></data>
+  <data name="About.Value3Title" xml:space="preserve"><value>L'humain avant tout</value></data>
+  <data name="About.Value3Text" xml:space="preserve"><value>De vraies personnes répondent à vos questions et vous aident réellement, sous un jour ouvrable.</value></data>
+  <data name="Contact.Title" xml:space="preserve"><value>Contactez-nous</value></data>
+  <data name="Contact.Lead" xml:space="preserve"><value>Une question sur une commande, un produit ou autre chose ? Envoyez-nous un message — nous répondons généralement sous un jour ouvrable.</value></data>
+  <data name="Contact.Name" xml:space="preserve"><value>Votre nom</value></data>
+  <data name="Contact.Subject" xml:space="preserve"><value>Sujet</value></data>
+  <data name="Contact.Message" xml:space="preserve"><value>Message</value></data>
+  <data name="Contact.Send" xml:space="preserve"><value>Envoyer le message</value></data>
+  <data name="Contact.Sent" xml:space="preserve"><value>Merci pour votre message ! Nous vous répondrons sous un jour ouvrable.</value></data>
+  <data name="Contact.DetailsTitle" xml:space="preserve"><value>Coordonnées</value></data>
+  <data name="Contact.PhoneLabel" xml:space="preserve"><value>Téléphone</value></data>
+  <data name="Contact.AddressLabel" xml:space="preserve"><value>Adresse</value></data>
+  <data name="Contact.HoursTitle" xml:space="preserve"><value>Heures d'ouverture</value></data>
+  <data name="Contact.HoursWeek" xml:space="preserve"><value>Lun–ven, 9 h – 17 h</value></data>
+  <data name="Contact.HoursWeekend" xml:space="preserve"><value>Week-ends et jours fériés : fermé</value></data>
+  <data name="Service.Title" xml:space="preserve"><value>FAQ</value></data>
+  <data name="Service.Lead" xml:space="preserve"><value>Les réponses aux questions les plus fréquentes sur les commandes, la livraison et les retours.</value></data>
+  <data name="Service.ShippingTitle" xml:space="preserve"><value>Livraison</value></data>
+  <data name="Service.ShippingText" xml:space="preserve"><value>Les commandes passées avant 22 h sont expédiées le jour même. Livraison en 1 à 3 jours ouvrables, gratuite dès 50 €.</value></data>
+  <data name="Service.ReturnsTitle" xml:space="preserve"><value>Retours</value></data>
+  <data name="Service.ReturnsText" xml:space="preserve"><value>Vous avez changé d'avis ? Retournez tout article sous 30 jours pour un remboursement intégral — sans justification.</value></data>
+  <data name="Service.PaymentTitle" xml:space="preserve"><value>Paiement</value></data>
+  <data name="Service.PaymentText" xml:space="preserve"><value>Payez en toute sécurité avec Bancontact, carte de crédit ou PayPal. Tous les paiements sont chiffrés.</value></data>
+  <data name="Service.FaqTitle" xml:space="preserve"><value>Questions fréquentes</value></data>
+  <data name="Service.Faq1Q" xml:space="preserve"><value>Où est ma commande ?</value></data>
+  <data name="Service.Faq1A" xml:space="preserve"><value>Connectez-vous et ouvrez « Mes commandes » pour voir le statut actuel de chaque commande. Vous recevrez aussi un e-mail dès l'expédition de votre colis.</value></data>
+  <data name="Service.Faq2Q" xml:space="preserve"><value>Puis-je modifier ou annuler ma commande ?</value></data>
+  <data name="Service.Faq2A" xml:space="preserve"><value>Tant que la commande n'a pas été expédiée, contactez-nous et nous la modifierons ou l'annulerons pour vous.</value></data>
+  <data name="Service.Faq3Q" xml:space="preserve"><value>Comment retourner un article ?</value></data>
+  <data name="Service.Faq3A" xml:space="preserve"><value>Contactez-nous dans les 30 jours suivant la livraison et nous vous enverrons une étiquette de retour prépayée. Le remboursement est effectué sous 5 jours ouvrables après réception.</value></data>
+  <data name="Service.Faq4Q" xml:space="preserve"><value>Les produits sont-ils garantis ?</value></data>
+  <data name="Service.Faq4A" xml:space="preserve"><value>Oui — tous les produits bénéficient de la garantie légale de deux ans. Un défaut ? Nous réparons, remplaçons ou remboursons.</value></data>
+  <data name="Service.Faq5Q" xml:space="preserve"><value>Dans quels pays livrez-vous ?</value></data>
+  <data name="Service.Faq5A" xml:space="preserve"><value>Nous livrons actuellement en Belgique, aux Pays-Bas, au Luxembourg et en France. D'autres pays suivront bientôt.</value></data>
+  <data name="Service.MoreHelp" xml:space="preserve"><value>Besoin d'aide supplémentaire ?</value></data>
+  <data name="Service.MoreHelpText" xml:space="preserve"><value>Notre équipe se fera un plaisir de vous aider personnellement.</value></data>
+  <data name="Service.ContactCta" xml:space="preserve"><value>Contactez-nous</value></data>
+  <data name="Privacy.Title" xml:space="preserve"><value>Politique de confidentialité</value></data>
+  <data name="Privacy.Updated" xml:space="preserve"><value>Dernière mise à jour : juillet 2026</value></data>
+  <data name="Privacy.Intro" xml:space="preserve"><value>Nemeris respecte votre vie privée. Cette politique explique quelles données personnelles nous collectons, pourquoi nous les collectons et quels sont vos droits.</value></data>
+  <data name="Privacy.S1Title" xml:space="preserve"><value>Ce que nous collectons</value></data>
+  <data name="Privacy.S1Text" xml:space="preserve"><value>Nous conservons les informations que vous nous fournissez lors de la création d'un compte ou d'une commande : nom, adresse e-mail, adresses de livraison, historique des commandes et numéro de téléphone le cas échéant.</value></data>
+  <data name="Privacy.S2Title" xml:space="preserve"><value>Comment nous utilisons vos données</value></data>
+  <data name="Privacy.S2Text" xml:space="preserve"><value>Vos données servent à traiter les commandes, organiser la livraison, assurer le support client et — uniquement avec votre consentement — vous envoyer des informations sur nos produits et offres.</value></data>
+  <data name="Privacy.S3Title" xml:space="preserve"><value>Cookies</value></data>
+  <data name="Privacy.S3Text" xml:space="preserve"><value>Nous utilisons des cookies fonctionnels pour maintenir votre connexion, mémoriser votre panier et enregistrer votre préférence de langue. Nous n'utilisons pas de cookies publicitaires ni de suivi.</value></data>
+  <data name="Privacy.S4Title" xml:space="preserve"><value>Partage avec des tiers</value></data>
+  <data name="Privacy.S4Text" xml:space="preserve"><value>Nous ne partageons vos données qu'avec les partenaires nécessaires à l'exécution de votre commande, comme les services de livraison et les prestataires de paiement. Nous ne vendons jamais vos données.</value></data>
+  <data name="Privacy.S5Title" xml:space="preserve"><value>Conservation et sécurité</value></data>
+  <data name="Privacy.S5Text" xml:space="preserve"><value>Les données sont stockées sur des serveurs sécurisés dans l'UE et conservées uniquement le temps requis par la loi. Les paiements sont toujours chiffrés.</value></data>
+  <data name="Privacy.S6Title" xml:space="preserve"><value>Vos droits</value></data>
+  <data name="Privacy.S6Text" xml:space="preserve"><value>Vous pouvez à tout moment demander l'accès, la rectification ou la suppression de vos données personnelles. Contactez-nous et nous répondrons sous 30 jours.</value></data>
 </root>

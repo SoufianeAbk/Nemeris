@@ -1,19 +1,48 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Localization;
 using Nemeris.Core.Dtos;
 using Nemeris.Core.Interfaces;
 using Nemeris.Web.Models;
 
 namespace Nemeris.Web.Controllers;
 
-public class HomeController(IProductService productService) : Controller
+public class HomeController(
+    IProductService productService,
+    IStringLocalizer<SharedResources> localizer) : Controller
 {
     public async Task<IActionResult> Index(CancellationToken ct)
     {
         var featured = await productService.GetPagedAsync(
             new ProductFilterDto { SortBy = "newest", PageSize = 8 }, ct);
         return View(featured.Items);
+    }
+
+    public IActionResult About() => View();
+
+    public IActionResult Faq() => View();
+
+    public IActionResult Privacy() => View();
+
+    [HttpGet]
+    public IActionResult Contact() => View(new ContactViewModel());
+
+    /// <summary>
+    /// There is no mail infrastructure yet, so the message is acknowledged
+    /// without being delivered anywhere.
+    /// </summary>
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public IActionResult Contact(ContactViewModel model)
+    {
+        if (!ModelState.IsValid)
+        {
+            return View(model);
+        }
+
+        TempData["Success"] = localizer["Contact.Sent"].Value;
+        return RedirectToAction(nameof(Contact));
     }
 
     /// <summary>

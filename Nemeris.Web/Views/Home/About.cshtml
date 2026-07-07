@@ -1,0 +1,71 @@
+@{
+    ViewData["Title"] = L["About.Title"];
+}
+
+<div class="page-hero">
+    <h1>@L["About.Title"]</h1>
+    <p class="lead">@L["About.Lead"]</p>
+</div>
+
+<div class="row justify-content-center mb-5">
+    <div class="col-lg-8">
+        <div class="legal-card">
+            <p>@L["About.Body1"]</p>
+            <p class="mb-0">@L["About.Body2"]</p>
+        </div>
+    </div>
+</div>
+
+<div class="row g-3 mb-5">
+    <div class="col-md-4">
+        <div class="stat-card">
+            <div class="stat-value">@L["About.Stat1Value"]</div>
+            <div class="stat-label">@L["About.Stat1Label"]</div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="stat-card">
+            <div class="stat-value">@L["About.Stat2Value"]</div>
+            <div class="stat-label">@L["About.Stat2Label"]</div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="stat-card">
+            <div class="stat-value">@L["About.Stat3Value"]</div>
+            <div class="stat-label">@L["About.Stat3Label"]</div>
+        </div>
+    </div>
+</div>
+
+<h2 class="text-center mb-4">@L["About.ValuesTitle"]</h2>
+<div class="row g-3 mb-5">
+    <div class="col-md-4">
+        <div class="feature-card">
+            <span class="feature-icon"><i class="bi bi-patch-check"></i></span>
+            <h3>@L["About.Value1Title"]</h3>
+            <p>@L["About.Value1Text"]</p>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="feature-card">
+            <span class="feature-icon"><i class="bi bi-tag"></i></span>
+            <h3>@L["About.Value2Title"]</h3>
+            <p>@L["About.Value2Text"]</p>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="feature-card">
+            <span class="feature-icon"><i class="bi bi-people"></i></span>
+            <h3>@L["About.Value3Title"]</h3>
+            <p>@L["About.Value3Text"]</p>
+        </div>
+    </div>
+</div>
+
+<div class="cta-panel">
+    <h2>@L["Home.HeroTitle"]</h2>
+    <p>@L["Home.HeroSubtitle"]</p>
+    <a class="btn btn-light btn-lg px-4" asp-controller="Product" asp-action="Index">
+        @L["Home.ShopNow"] <i class="bi bi-arrow-right ms-1"></i>
+    </a>
+</div>

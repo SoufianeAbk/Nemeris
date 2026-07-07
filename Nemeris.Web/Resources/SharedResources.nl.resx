@@ -167,4 +167,90 @@
   <data name="Validation.PasswordLength" xml:space="preserve"><value>Het wachtwoord moet minstens 8 tekens bevatten.</value></data>
   <data name="Validation.PasswordMismatch" xml:space="preserve"><value>De wachtwoorden komen niet overeen.</value></data>
   <data name="Validation.CountryCode" xml:space="preserve"><value>Gebruik een landcode van twee letters, bijv. BE.</value></data>
+  <data name="Nav.About" xml:space="preserve"><value>Over ons</value></data>
+  <data name="Nav.Contact" xml:space="preserve"><value>Contact</value></data>
+  <data name="Nav.Faq" xml:space="preserve"><value>FAQ</value></data>
+  <data name="Nav.Privacy" xml:space="preserve"><value>Privacybeleid</value></data>
+  <data name="Footer.Tagline" xml:space="preserve"><value>Kwaliteitsproducten, geleverd tot aan je deur. Modern winkelen zonder gedoe.</value></data>
+  <data name="Footer.Shop" xml:space="preserve"><value>Winkel</value></data>
+  <data name="Footer.Support" xml:space="preserve"><value>Hulp en service</value></data>
+  <data name="Footer.Company" xml:space="preserve"><value>Bedrijf</value></data>
+  <data name="Footer.Rights" xml:space="preserve"><value>Alle rechten voorbehouden.</value></data>
+  <data name="Home.HeroEyebrow" xml:space="preserve"><value>Nieuw seizoen, nieuwe collectie</value></data>
+  <data name="Home.ViewAll" xml:space="preserve"><value>Bekijk alle producten</value></data>
+  <data name="Home.USP1Title" xml:space="preserve"><value>Gratis verzending</value></data>
+  <data name="Home.USP1Text" xml:space="preserve"><value>Bij bestellingen vanaf €50</value></data>
+  <data name="Home.USP2Title" xml:space="preserve"><value>Eenvoudig retourneren</value></data>
+  <data name="Home.USP2Text" xml:space="preserve"><value>30 dagen bedenktijd</value></data>
+  <data name="Home.USP3Title" xml:space="preserve"><value>Veilig betalen</value></data>
+  <data name="Home.USP3Text" xml:space="preserve"><value>Altijd versleuteld afrekenen</value></data>
+  <data name="Home.USP4Title" xml:space="preserve"><value>Snelle service</value></data>
+  <data name="Home.USP4Text" xml:space="preserve"><value>We antwoorden binnen 24 uur</value></data>
+  <data name="About.Title" xml:space="preserve"><value>Over Nemeris</value></data>
+  <data name="About.Lead" xml:space="preserve"><value>Wij geloven dat goede producten makkelijk te vinden moeten zijn. Nemeris brengt een zorgvuldig gekozen selectie kwaliteitsproducten tot aan je deur — eenvoudig, snel en eerlijk.</value></data>
+  <data name="About.Body1" xml:space="preserve"><value>Nemeris begon met een eenvoudig idee: online winkelen moet moeiteloos aanvoelen. Geen overvolle catalogi, geen verborgen kosten — enkel een zorgvuldig gekozen aanbod, eerlijke prijzen en snelle levering.</value></data>
+  <data name="About.Body2" xml:space="preserve"><value>Vandaag bedienen we klanten in de hele Benelux en daarbuiten. We werken rechtstreeks met betrouwbare leveranciers, controleren elk product dat ons magazijn binnenkomt en verbeteren de ervaring met elke bestelling.</value></data>
+  <data name="About.Stat1Value" xml:space="preserve"><value>10 000+</value></data>
+  <data name="About.Stat1Label" xml:space="preserve"><value>Tevreden klanten</value></data>
+  <data name="About.Stat2Value" xml:space="preserve"><value>2 500+</value></data>
+  <data name="About.Stat2Label" xml:space="preserve"><value>Producten in de winkel</value></data>
+  <data name="About.Stat3Value" xml:space="preserve"><value>24 u</value></data>
+  <data name="About.Stat3Label" xml:space="preserve"><value>Gemiddelde verzendtijd</value></data>
+  <data name="About.ValuesTitle" xml:space="preserve"><value>Waar we voor staan</value></data>
+  <data name="About.Value1Title" xml:space="preserve"><value>Kwaliteit voorop</value></data>
+  <data name="About.Value1Text" xml:space="preserve"><value>Elk product wordt gecontroleerd voor verzending. Niet goed genoeg? Dan gaat het niet de deur uit.</value></data>
+  <data name="About.Value2Title" xml:space="preserve"><value>Eerlijke prijzen</value></data>
+  <data name="About.Value2Text" xml:space="preserve"><value>Geen verborgen kosten of opgeblazen kortingen — de prijs die je ziet, is de prijs die je betaalt.</value></data>
+  <data name="About.Value3Title" xml:space="preserve"><value>Mensen boven processen</value></data>
+  <data name="About.Value3Text" xml:space="preserve"><value>Vragen worden beantwoord door echte mensen die je écht kunnen helpen, binnen één werkdag.</value></data>
+  <data name="Contact.Title" xml:space="preserve"><value>Contacteer ons</value></data>
+  <data name="Contact.Lead" xml:space="preserve"><value>Vragen over een bestelling, een product of iets anders? Stuur ons een bericht — we antwoorden meestal binnen één werkdag.</value></data>
+  <data name="Contact.Name" xml:space="preserve"><value>Je naam</value></data>
+  <data name="Contact.Subject" xml:space="preserve"><value>Onderwerp</value></data>
+  <data name="Contact.Message" xml:space="preserve"><value>Bericht</value></data>
+  <data name="Contact.Send" xml:space="preserve"><value>Verstuur bericht</value></data>
+  <data name="Contact.Sent" xml:space="preserve"><value>Bedankt voor je bericht! We nemen binnen één werkdag contact met je op.</value></data>
+  <data name="Contact.DetailsTitle" xml:space="preserve"><value>Contactgegevens</value></data>
+  <data name="Contact.PhoneLabel" xml:space="preserve"><value>Telefoon</value></data>
+  <data name="Contact.AddressLabel" xml:space="preserve"><value>Adres</value></data>
+  <data name="Contact.HoursTitle" xml:space="preserve"><value>Openingsuren</value></data>
+  <data name="Contact.HoursWeek" xml:space="preserve"><value>Ma–vr, 9:00–17:00</value></data>
+  <data name="Contact.HoursWeekend" xml:space="preserve"><value>Weekends en feestdagen: gesloten</value></data>
+  <data name="Service.Title" xml:space="preserve"><value>FAQ</value></data>
+  <data name="Service.Lead" xml:space="preserve"><value>Antwoorden op de meest gestelde vragen over bestellen, verzenden en retourneren.</value></data>
+  <data name="Service.ShippingTitle" xml:space="preserve"><value>Verzending</value></data>
+  <data name="Service.ShippingText" xml:space="preserve"><value>Bestellingen vóór 22:00 worden dezelfde dag verzonden. Levering duurt 1–3 werkdagen en is gratis vanaf €50.</value></data>
+  <data name="Service.ReturnsTitle" xml:space="preserve"><value>Retourneren</value></data>
+  <data name="Service.ReturnsText" xml:space="preserve"><value>Van gedachten veranderd? Retourneer elk artikel binnen 30 dagen voor een volledige terugbetaling — zonder vragen.</value></data>
+  <data name="Service.PaymentTitle" xml:space="preserve"><value>Betalen</value></data>
+  <data name="Service.PaymentText" xml:space="preserve"><value>Betaal veilig met Bancontact, kredietkaart of PayPal. Alle betalingen zijn versleuteld.</value></data>
+  <data name="Service.FaqTitle" xml:space="preserve"><value>Veelgestelde vragen</value></data>
+  <data name="Service.Faq1Q" xml:space="preserve"><value>Waar is mijn bestelling?</value></data>
+  <data name="Service.Faq1A" xml:space="preserve"><value>Meld je aan en open “Mijn bestellingen” om de actuele status van elke bestelling te zien. Je ontvangt ook een e-mail zodra je pakket verzonden is.</value></data>
+  <data name="Service.Faq2Q" xml:space="preserve"><value>Kan ik mijn bestelling wijzigen of annuleren?</value></data>
+  <data name="Service.Faq2A" xml:space="preserve"><value>Zolang de bestelling niet verzonden is, kun je contact opnemen en passen we ze aan of annuleren we ze voor jou.</value></data>
+  <data name="Service.Faq3Q" xml:space="preserve"><value>Hoe retourneer ik een artikel?</value></data>
+  <data name="Service.Faq3A" xml:space="preserve"><value>Neem binnen 30 dagen na levering contact op en we mailen je een voorgefrankeerd retourlabel. Terugbetalingen volgen binnen 5 werkdagen na ontvangst.</value></data>
+  <data name="Service.Faq4Q" xml:space="preserve"><value>Zit er garantie op de producten?</value></data>
+  <data name="Service.Faq4A" xml:space="preserve"><value>Ja — op alle producten geldt de wettelijke garantie van twee jaar. Iets defect? We herstellen, vervangen of betalen terug.</value></data>
+  <data name="Service.Faq5Q" xml:space="preserve"><value>Naar welke landen leveren jullie?</value></data>
+  <data name="Service.Faq5A" xml:space="preserve"><value>We leveren momenteel in België, Nederland, Luxemburg en Frankrijk. Meer landen volgen binnenkort.</value></data>
+  <data name="Service.MoreHelp" xml:space="preserve"><value>Nog hulp nodig?</value></data>
+  <data name="Service.MoreHelpText" xml:space="preserve"><value>Ons team helpt je graag persoonlijk verder.</value></data>
+  <data name="Service.ContactCta" xml:space="preserve"><value>Neem contact op</value></data>
+  <data name="Privacy.Title" xml:space="preserve"><value>Privacybeleid</value></data>
+  <data name="Privacy.Updated" xml:space="preserve"><value>Laatst bijgewerkt: juli 2026</value></data>
+  <data name="Privacy.Intro" xml:space="preserve"><value>Nemeris respecteert je privacy. Dit beleid legt uit welke persoonsgegevens we verzamelen, waarom we dat doen en wat je rechten zijn.</value></data>
+  <data name="Privacy.S1Title" xml:space="preserve"><value>Wat we verzamelen</value></data>
+  <data name="Privacy.S1Text" xml:space="preserve"><value>We bewaren de gegevens die je ons geeft bij het aanmaken van een account of het plaatsen van een bestelling: je naam, e-mailadres, leveradressen, bestelgeschiedenis en telefoonnummer indien opgegeven.</value></data>
+  <data name="Privacy.S2Title" xml:space="preserve"><value>Hoe we je gegevens gebruiken</value></data>
+  <data name="Privacy.S2Text" xml:space="preserve"><value>Je gegevens worden gebruikt om bestellingen te verwerken, leveringen te regelen, klantenservice te bieden en — enkel met jouw toestemming — je updates over producten en aanbiedingen te sturen.</value></data>
+  <data name="Privacy.S3Title" xml:space="preserve"><value>Cookies</value></data>
+  <data name="Privacy.S3Text" xml:space="preserve"><value>We gebruiken functionele cookies om je aangemeld te houden, je winkelwagen te onthouden en je taalvoorkeur op te slaan. We gebruiken geen advertentie- of trackingcookies.</value></data>
+  <data name="Privacy.S4Title" xml:space="preserve"><value>Delen met derden</value></data>
+  <data name="Privacy.S4Text" xml:space="preserve"><value>We delen gegevens enkel met partners die nodig zijn om je bestelling uit te voeren, zoals bezorgdiensten en betalingsproviders. We verkopen je gegevens nooit.</value></data>
+  <data name="Privacy.S5Title" xml:space="preserve"><value>Bewaring en beveiliging</value></data>
+  <data name="Privacy.S5Text" xml:space="preserve"><value>Gegevens worden bewaard op beveiligde servers binnen de EU en niet langer dan wettelijk vereist. Betalingen zijn altijd versleuteld.</value></data>
+  <data name="Privacy.S6Title" xml:space="preserve"><value>Je rechten</value></data>
+  <data name="Privacy.S6Text" xml:space="preserve"><value>Je kunt op elk moment inzage, correctie of verwijdering van je persoonsgegevens vragen. Neem contact op en we reageren binnen 30 dagen.</value></data>
 </root>

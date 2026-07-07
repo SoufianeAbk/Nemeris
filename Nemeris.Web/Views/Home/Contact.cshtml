@@ -1,0 +1,88 @@
+@model ContactViewModel
+@{
+    ViewData["Title"] = L["Contact.Title"];
+}
+
+<div class="page-hero">
+    <h1>@L["Contact.Title"]</h1>
+    <p class="lead">@L["Contact.Lead"]</p>
+</div>
+
+<div class="row g-4 justify-content-center mb-5">
+    <div class="col-lg-7">
+        <div class="card">
+            <div class="card-body p-4">
+                <form asp-controller="Home" asp-action="Contact" method="post">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label asp-for="Name" class="form-label">@L["Contact.Name"]</label>
+                            <input asp-for="Name" class="form-control" />
+                            <span asp-validation-for="Name" class="text-danger small"></span>
+                        </div>
+                        <div class="col-md-6">
+                            <label asp-for="Email" class="form-label">@L["Account.Email"]</label>
+                            <input asp-for="Email" class="form-control" />
+                            <span asp-validation-for="Email" class="text-danger small"></span>
+                        </div>
+                        <div class="col-12">
+                            <label asp-for="Subject" class="form-label">@L["Contact.Subject"]</label>
+                            <input asp-for="Subject" class="form-control" />
+                            <span asp-validation-for="Subject" class="text-danger small"></span>
+                        </div>
+                        <div class="col-12">
+                            <label asp-for="Message" class="form-label">@L["Contact.Message"]</label>
+                            <textarea asp-for="Message" class="form-control" rows="6"></textarea>
+                            <span asp-validation-for="Message" class="text-danger small"></span>
+                        </div>
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-primary px-4">
+                                <i class="bi bi-send me-1"></i>@L["Contact.Send"]
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="card h-100">
+            <div class="card-body p-4">
+                <h2 class="fs-5 mb-4">@L["Contact.DetailsTitle"]</h2>
+                <ul class="contact-list">
+                    <li>
+                        <span class="usp-icon"><i class="bi bi-envelope"></i></span>
+                        <div>
+                            <strong>@L["Account.Email"]</strong>
+                            <span>support@nemeris.com</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="usp-icon"><i class="bi bi-telephone"></i></span>
+                        <div>
+                            <strong>@L["Contact.PhoneLabel"]</strong>
+                            <span>+32 2 123 45 67</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="usp-icon"><i class="bi bi-geo-alt"></i></span>
+                        <div>
+                            <strong>@L["Contact.AddressLabel"]</strong>
+                            <span>Boulevard Nemeris 1, 1000 Brussels</span>
+                        </div>
+                    </li>
+                    <li class="mb-0">
+                        <span class="usp-icon"><i class="bi bi-clock"></i></span>
+                        <div>
+                            <strong>@L["Contact.HoursTitle"]</strong>
+                            <span>@L["Contact.HoursWeek"]<br />@L["Contact.HoursWeekend"]</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

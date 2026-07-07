@@ -1,0 +1,103 @@
+@{
+    ViewData["Title"] = L["Service.Title"];
+}
+
+<div class="page-hero">
+    <h1>@L["Service.Title"]</h1>
+    <p class="lead">@L["Service.Lead"]</p>
+</div>
+
+<div class="row g-3 mb-5">
+    <div class="col-md-4">
+        <div class="feature-card">
+            <span class="feature-icon"><i class="bi bi-truck"></i></span>
+            <h3>@L["Service.ShippingTitle"]</h3>
+            <p>@L["Service.ShippingText"]</p>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="feature-card">
+            <span class="feature-icon"><i class="bi bi-arrow-return-left"></i></span>
+            <h3>@L["Service.ReturnsTitle"]</h3>
+            <p>@L["Service.ReturnsText"]</p>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="feature-card">
+            <span class="feature-icon"><i class="bi bi-shield-check"></i></span>
+            <h3>@L["Service.PaymentTitle"]</h3>
+            <p>@L["Service.PaymentText"]</p>
+        </div>
+    </div>
+</div>
+
+<div class="row justify-content-center mb-5">
+    <div class="col-lg-8">
+        <h2 class="text-center mb-4">@L["Service.FaqTitle"]</h2>
+        <div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+                <h3 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1"
+                            aria-expanded="true" aria-controls="faq1">
+                        @L["Service.Faq1Q"]
+                    </button>
+                </h3>
+                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">@L["Service.Faq1A"]</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2"
+                            aria-expanded="false" aria-controls="faq2">
+                        @L["Service.Faq2Q"]
+                    </button>
+                </h3>
+                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">@L["Service.Faq2A"]</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3"
+                            aria-expanded="false" aria-controls="faq3">
+                        @L["Service.Faq3Q"]
+                    </button>
+                </h3>
+                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">@L["Service.Faq3A"]</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4"
+                            aria-expanded="false" aria-controls="faq4">
+                        @L["Service.Faq4Q"]
+                    </button>
+                </h3>
+                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">@L["Service.Faq4A"]</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5"
+                            aria-expanded="false" aria-controls="faq5">
+                        @L["Service.Faq5Q"]
+                    </button>
+                </h3>
+                <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">@L["Service.Faq5A"]</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="cta-panel">
+    <h2>@L["Service.MoreHelp"]</h2>
+    <p>@L["Service.MoreHelpText"]</p>
+    <a class="btn btn-light btn-lg px-4" asp-controller="Home" asp-action="Contact">
+        @L["Service.ContactCta"] <i class="bi bi-arrow-right ms-1"></i>
+    </a>
+</div>

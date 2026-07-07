@@ -1,0 +1,42 @@
+@{
+    ViewData["Title"] = L["Privacy.Title"];
+}
+
+<div class="page-hero">
+    <h1>@L["Privacy.Title"]</h1>
+    <p class="lead">@L["Privacy.Intro"]</p>
+</div>
+
+<div class="row justify-content-center mb-5">
+    <div class="col-lg-8">
+        <div class="legal-card">
+            <p class="text-muted small mb-4"><i class="bi bi-calendar3 me-1"></i>@L["Privacy.Updated"]</p>
+
+            <h2>@L["Privacy.S1Title"]</h2>
+            <p>@L["Privacy.S1Text"]</p>
+
+            <h2>@L["Privacy.S2Title"]</h2>
+            <p>@L["Privacy.S2Text"]</p>
+
+            <h2>@L["Privacy.S3Title"]</h2>
+            <p>@L["Privacy.S3Text"]</p>
+
+            <h2>@L["Privacy.S4Title"]</h2>
+            <p>@L["Privacy.S4Text"]</p>
+
+            <h2>@L["Privacy.S5Title"]</h2>
+            <p>@L["Privacy.S5Text"]</p>
+
+            <h2>@L["Privacy.S6Title"]</h2>
+            <p class="mb-0">@L["Privacy.S6Text"]</p>
+        </div>
+    </div>
+</div>
+
+<div class="cta-panel">
+    <h2>@L["Service.MoreHelp"]</h2>
+    <p>@L["Service.MoreHelpText"]</p>
+    <a class="btn btn-light btn-lg px-4" asp-controller="Home" asp-action="Contact">
+        @L["Service.ContactCta"] <i class="bi bi-arrow-right ms-1"></i>
+    </a>
+</div>
